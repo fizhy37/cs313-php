@@ -6,7 +6,14 @@
   	<script type="text/javascript" src="jquery.js"></script>
   	<script type="text/javascript">
   		$(document).ready(function(){
-  			
+  			$("#about").fadeIn(1500);
+
+  			$("#drop_one").click(function(){
+  				$("#div_one").toggle("slow");
+  			});
+  			$("#drop_two").click(function(){
+  				$("#div_two").toggle("slow");
+  			});
   		});
   	</script>
 </head>
@@ -14,13 +21,37 @@
 <body>
 	<h1>Ben Fisher</h1>
 	<nav>
-		<a href="home.html">Home</a>
-		<a href="assignments.html">Assignments</a>
-		<a href="https://www.youtube.com/sabertoothzebras">YouTube</a>
+		<div>
+			<a class="bar" href="home.html">Home</a>
+			<a class="bar" href="assignments.html">Assignments</a>
+			<a class="bar" href="http://fisherdigitalmedia.businesscatalyst.com">FDM Website</a>
+			<a class="bar" href="https://www.youtube.com/sabertoothzebras">YouTube</a>
+		</div>
 	</nav>
 	<div>
-		<img src="me.jpg" alt="A picture of me">
-		<p>I am from Pocatello, Idaho. I like to make movies.</p>
+		<nav id="nav_one">
+			<a id="drop_one" class="bar">About Me</a>
+		</nav>
+		<div id="div_one" class="marg">
+		<img id="me" class="about" src="me.jpg" alt="A picture of me">
+		<p id="about">My name is Ben Fisher. I'm a freelance videographer from Idaho. I've been into video production for over 10 years. I've always loved playing around with video cameras ever since I was little. In grade school, a friend and I started out playing with my parents' camera, which evolved into making simple videos for YouTube, just for fun. We took classes with a couple more of our friends and we got better and better as we started incorporating special effects. We were known in high school for the videos that we made. I was later hired by the school to run their broadcast morning announcements.<br><br>
+ 
+		After I graduated from high school, I served a two year mission for The Church of Jesus Christ of Latter-day Saints in Spain. I lived in the southern half of Spain, talking with and serving the people for the duration of my time with them. Those two years are very special to me and have helped shape who I am today.<br><br>
+ 
+		Aside from making YouTube videos with my friends, I've been hired for video projects over the years. The majority of them have been wedding videos, but I have also taken on projects such as commercials for businesses. With my drone license, I am able to incorporate aerial shots into my videos which really adds another dimension.<br><br>
+ 
+		I've started Fisher Digital Media because I enjoy making videos for people. Seeing the finished product of a project is one of the most rewarding feelings that I love to experience. I'm ready to take my passion from a side hobby to a professional business.<br><br>
+ 
+		Lastly, I was married to the love of my life a few months ago. We are now attending school with hopes to start a family soon.</p>
+	</div>
+	</div>
+	<div>
+		<nav id="nav_two">
+			<a id="drop_two" class="bar">About My Business</a>
+		</nav>
+		<div id="div_two">
+			<p>Here is some more content</p>
+		</div>
 	</div>
 </body>
 
