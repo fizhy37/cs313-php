@@ -17,6 +17,7 @@ nav {
 }
 
 .bar:hover {
+	cursor:pointer;
 	background-color:#555555;
 }
 
@@ -58,5 +59,6 @@ a.list {
 }
 
 a.list:hover {
+	cursor:pointer;
 	color:black;
 }
