@@ -2,17 +2,19 @@
 <html>
 <head>
   	<title>Ben's Homepage</title>
-  	<link rel="stylesheet" href="home.css">
+  	<link rel="stylesheet" href="homepage.css">
   	<script type="text/javascript" src="jquery.js"></script>
   	<script type="text/javascript">
   		$(document).ready(function(){
-  			$("#about").fadeIn(1500);
-
+  			$("#div_one").hide();
+  			$("#div_two").hide();
   			$("#drop_one").click(function(){
   				$("#div_one").toggle("slow");
+  				$("#about_me").fadeIn(1500);
   			});
   			$("#drop_two").click(function(){
   				$("#div_two").toggle("slow");
+  				$("#about_fdm").fadeIn(1500);
   			});
   		});
   	</script>
@@ -28,29 +30,30 @@
 			<a class="bar" href="https://www.youtube.com/sabertoothzebras">YouTube</a>
 		</div>
 	</nav>
-	<div>
+	<div id="drop">
 		<nav id="nav_one">
 			<a id="drop_one" class="bar">About Me</a>
 		</nav>
 		<div id="div_one" class="marg">
-		<img id="me" class="about" src="me.jpg" alt="A picture of me">
-		<p id="about">My name is Ben Fisher. I'm a freelance videographer from Idaho. I've been into video production for over 10 years. I've always loved playing around with video cameras ever since I was little. In grade school, a friend and I started out playing with my parents' camera, which evolved into making simple videos for YouTube, just for fun. We took classes with a couple more of our friends and we got better and better as we started incorporating special effects. We were known in high school for the videos that we made. I was later hired by the school to run their broadcast morning announcements.<br><br>
- 
-		After I graduated from high school, I served a two year mission for The Church of Jesus Christ of Latter-day Saints in Spain. I lived in the southern half of Spain, talking with and serving the people for the duration of my time with them. Those two years are very special to me and have helped shape who I am today.<br><br>
- 
-		Aside from making YouTube videos with my friends, I've been hired for video projects over the years. The majority of them have been wedding videos, but I have also taken on projects such as commercials for businesses. With my drone license, I am able to incorporate aerial shots into my videos which really adds another dimension.<br><br>
- 
-		I've started Fisher Digital Media because I enjoy making videos for people. Seeing the finished product of a project is one of the most rewarding feelings that I love to experience. I'm ready to take my passion from a side hobby to a professional business.<br><br>
- 
-		Lastly, I was married to the love of my life a few months ago. We are now attending school with hopes to start a family soon.</p>
-	</div>
+			<img id="me" src="me.jpg" alt="A picture of me">
+			<p id="about_me" class="about">My name is Ben Fisher. I'm a freelance videographer from Pocatello, Idaho, but I live in Rexburg now. I have a drone license. I've been into video production for over 10 years now. You might wonder why I'm a computer science major then. Honestly, I'm not quite sure why, but it felt like the thing to do. Computers have always interested me, and I like to build things. So I figured I could try it out. So far it's been pretty challenging, but I also like it.<br><br>
+
+			After I graduated from high school, I served a mission in Malaga Spain (the best mission in the world). I met a sister missionary there who was from Idaho Falls. I wrote her after I got home, and when she got home we started dating. We have been married for 10 months now.</p>
+		</div>
 	</div>
 	<div>
 		<nav id="nav_two">
 			<a id="drop_two" class="bar">About My Business</a>
 		</nav>
-		<div id="div_two">
-			<p>Here is some more content</p>
+		<div id="div_two" class="marg">
+			<img id="fdm" src="fdm_logo.png" alt="Business Logo">
+			<p id="about_fdm" class="about">Being that I love making videos, I started a little side business. It's called Fisher Digital Media. Most of my work has been making wedding videos, but I also have made commercials and similar promotional videos for people. I feel like I know my way around the Adobe video editing software like Premiere Pro and After Effects, yet I still learn something new about each one every day.<br><br>
+
+			I started back around middle school with a video camera. My friend and I would play around with it and make stupid little videos. Before long, I started playing around with editing the videos, and around that time, YouTube was starting to be a thing. So we started making content for that. Looking back, I am almost embarassed by the videos that we made, but it was an essential learning time to get where I am today. We took a classes in high school with some more friends and became known in our school as the video guys.<br><br>
+
+			I feel rewarded when I see the final product of a project that I have worked on. Seeing people's reactions is also a huge rush. That's kind of what keeps me going in the business, because the money part just wouldn't be enough.<br><br>
+
+			I included two links at the top of this page. FDM Website is for Fisher Digital Media. It's a mock website I created but haven't officially launched yet. On there I have a portfolio if you have any interest in seeing what I've done. I also included a link to our YouTube channel that we uploaded videos to throughout high school. Feel free to poke around.</p>
 		</div>
 	</div>
 </body>

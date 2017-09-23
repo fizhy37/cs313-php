@@ -1,5 +1,5 @@
 body {
-	background-color:#0000ff;
+	background-color:#eeeeee;
 	font-family:sans-serif;
 	margin:0px;
 }
@@ -37,6 +37,15 @@ h1 {
 	display:block;
 	width:400px;
 	margin:auto;
+	margin-bottom:15px;
+	border-radius:15px;
+}
+
+#fdm {
+	display:block;
+	width:400px;
+	margin:auto;
+	margin-bottom:15px;
 	border-radius:15px;
 }
 
@@ -46,7 +55,15 @@ h1 {
 	margin-bottom:30px;
 }
 
-#about {
+p.about {
+	display:none;
+	width:400px;
+	margin:auto;
+	margin-top:15px;
+	text-align:justify;
+}
+
+#about_fdm {
 	display:none;
 	width:400px;
 	margin:auto;
