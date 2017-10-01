@@ -1,25 +1,56 @@
+<?php
+session_start();
+
+$total_items = 0;
+
+if (isset ($_SESSION["item1"]))
+    $item1 = 0;
+else {
+    $item1 = $_POST["item1"];
+    $total_items += $item1;
+}
+
+if ($_POST["item2"] === NULL)
+    $item2 = 0;
+else {
+    $item2 = $_POST["item2"];
+    $total_items += $item2;
+}
+
+if ($_POST["item3"] === NULL)
+    $item3 = 0;
+else {
+    $item3 = $_POST["item3"];
+    $total_items += $item3;
+}
+
+if ($_POST["item4"] === NULL)
+    $item4 = 0;
+else {
+    $item4 = $_POST["item4"];
+    $total_items += $item4;
+}
+
+foreach($_POST['item'] as $item) {
+    $_SESSION[$item] = "$item";
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
-  	<title>Assignment 03</title>
-  	<link rel="stylesheet" href="../home.css">
-  	<script type="text/javascript" src="jquery.js"></script>
-  	<script type="text/javascript">
-  		$(document).ready(function(){
-  			
-  		});
-  	</script>
 </head>
 
 <body>
-	<h1>Assignment 03</h1>
-	<nav>
-		<a class="bar" href="../home.html">Home</a>
-		<a class="bar" href="../assignments.html">Assignments</a>
-		<a class="bar" href="https://www.youtube.com/sabertoothzebras">YouTube</a>
-	</nav>
-	<div>
-	</div>
+    <form action="assign03.php" method="post">
+    <input type="number" size="5" name="item1" value="<?php echo $item1; ?>">
+    <button type="button" onclick="assign03.php" method="post">add to cart</button>
+    <input type="number" size="5" name="item2" value="<?php echo $item2; ?>">
+    <input type="number" size="5" name="item3" value="<?php echo $item3; ?>">
+    <input type="number" size="5" name="item4" value="<?php echo $item4; ?>">
+    <button type="button" onclick="<?php echo 'you've clicked it!'; ?>">click me</button>
+    <input type="submit">
+    <?php echo "$item1 + $item2 + $item3 + $item4 = $total_items"; ?>
+    <a href="cart.php">go to cart</a>
 </body>
-
 </html>
