@@ -53,13 +53,23 @@ function dump($var){
 $catalog = [
     new Product(array(
         'id' => 1,
-        'name' => 'Cool Knife',
-        'amount' => 55.00,
+        'name' => 'Canon 70D',
+        'amount' => 700.00,
     )),
     new Product(array(
         'id' => 2,
-        'name' => 'Cool Cutting Board',
-        'amount' => 15.00,
+        'name' => 'Batteries',
+        'amount' => 20.00,
+    )), 
+    new Product(array(
+        'id' => 3,
+        'name' => 'Microphone',
+        'amount' => 200.00,
+    )),
+    new Product(array(
+        'id' => 4,
+        'name' => 'Stabilizer',
+        'amount' => 90.00,
     )), 
 ];
 
