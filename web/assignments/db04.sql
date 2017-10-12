@@ -39,8 +39,7 @@ VALUES (
     	'Fisher',
 	'Ben',
 	2087760707,
-	1830,
-	'Satterfield'
+	'111 W 7 S APT 909'
 );
 
 
@@ -53,9 +52,21 @@ VALUES (
     	'Fisher',
 	'Casslyn',
 	2083137128,
-	111,
-	'W 7 S APT 909'
+	'111 W 7 S APT 909'
 );
+
+
+INSERT INTO customer 
+VALUES (
+
+	DEFAULT, 
+
+    	'Nield',
+	'Bryton',
+	2082205015,
+	'420 Callaway'
+);
+
 
 
 ALTER TABLE package
@@ -68,9 +79,61 @@ VALUES (
     	DEFAULT, 
 
     	'Basic',
-    	'399',
+    	'429',
 	1,
 	'2.5-3.5 minutes',
 	'This package includes up to 3 hours of coverage, and a discount at Destinations Inn.'
+);
+
+
+INSERT INTO package 
+VALUES (
+
+    	DEFAULT, 
+
+    	'Standard',
+    	'549',
+	1,
+	'2.5-3.5 minutes',
+	'This package includes up to 6 hours of coverage, and a discount at Destinations Inn.'
+);
+
+
+INSERT INTO package 
+VALUES (
+
+    	DEFAULT, 
+
+    	'Deluxe',
+    	'649',
+	2,
+	'5-7 minutes',
+	'This package includes up to 6 hours of coverage, and a discount at Destinations Inn.'
+);
+
+
+INSERT INTO package 
+VALUES (
+
+    	DEFAULT, 
+
+    	'Super Deluxe',
+    	'829',
+	3,
+	'10 minutes',
+	'This package includes up to 9 hours of coverage for a Bridal Session, Wedding Ceremony, and Reception. It also includes a discount at Destinations Inn.'
+);
+
+
+
+INSERT INTO customer 
+VALUES (
+
+	DEFAULT, 
+
+    	'Monson',
+	'Bailee',
+	NULL,
+	NULL
 );
 
