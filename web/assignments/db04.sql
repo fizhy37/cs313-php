@@ -133,7 +133,108 @@ VALUES (
 
     	'Monson',
 	'Bailee',
-	NULL,
-	NULL
 );
 
+
+INSERT INTO customer VALUES (
+	DEFAULT,
+	'Whiting',
+	'Ashley'
+);
+
+INSERT INTO customer VALUES (
+	DEFAULT,
+	'Hendricks',
+	'Meghan'
+);
+
+INSERT INTO customer VALUES (
+	DEFAULT,
+	'Campbell',
+	'Hanna',
+	2082217080
+);
+
+INSERT INTO customer VALUES (
+	DEFAULT,
+	'Pahl',
+	'Jantzen',
+	2087054515
+);
+
+INSERT INTO customer VALUES (
+	DEFAULT,
+	'Judy',
+	'Ashley',
+	2083602010
+);
+
+INSERT INTO customer VALUES (
+	DEFAULT,
+	'Pahl',
+	'Bayley',
+	2087052746
+);
+
+INSERT INTO customer VALUES (
+	DEFAULT,
+	'Evans',
+	'Shelby',
+	2085300081
+);
+
+INSERT INTO customer VALUES (
+	DEFAULT,
+	'Bailey',
+	'Hope',
+	2087056119
+);
+
+INSERT INTO customer VALUES (
+	DEFAULT,
+	'Clark',
+	'Michelle'
+);
+
+INSERT INTO customer VALUES (
+	DEFAULT,
+	'Landinez',
+	'Jose'
+);
+
+INSERT INTO customer VALUES (
+	DEFAULT,
+	'Preston',
+	'Christi'
+);
+
+INSERT INTO customer VALUES (
+	DEFAULT,
+	'Reese',
+	'Emily',
+	2083515844
+);
+
+INSERT INTO customer VALUES (
+	DEFAULT,
+	'Fisher',
+	'Dallin',
+	2083171623
+);
+
+INSERT INTO customer VALUES (
+	DEFAULT,
+	'Weston',
+	'Kayla'
+);
+
+INSERT INTO sale VALUES (
+	DEFAULT,
+	3,
+	( SELECT id
+		FROM customer
+		WHERE lastname = 'Whiting'
+		AND firstname = 'Ashley'),
+	250,
+	true
+);
