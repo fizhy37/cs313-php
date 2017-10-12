@@ -29,9 +29,9 @@
 	<body>
 		<h1>Search database</h1>
 		<?php
-			foreach ($db->query("SELECT * FROM customer, package, sale") as $row)
+			foreach ($db->query("SELECT * FROM customer") as $row)
 			{
-			  echo $row['firstname'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</span> - "' . $row['content'] . '"';
+			  echo $row['firstname'] . ' ' . $row['lastname'] . ' lives at ' . $row['address'];
 			  echo '<br/>';
 			}
 		?>
