@@ -27,11 +27,11 @@
 		</style>
 	</head>
 	<body>
-		<h1>Scripture Resources</h1>
+		<h1>Search database</h1>
 		<?php
 			foreach ($db->query("SELECT * FROM customer, package, sale") as $row)
 			{
-			  echo '<span class="boldScrip">' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</span> - "' . $row['content'] . '"';
+			  echo $row['firstname'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</span> - "' . $row['content'] . '"';
 			  echo '<br/>';
 			}
 		?>
