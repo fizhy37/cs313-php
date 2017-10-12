@@ -1,0 +1,170 @@
+CREATE TABLE customer (
+
+	id          	SERIAL PRIMARY KEY,
+
+    	lastname    	varchar(255) NOT NULL,
+    	firstname   	varchar(255) NOT NULL,
+    	phone       	int NOT NULL,
+    	address   	varchar(255) NOT NULL
+);
+
+CREATE TABLE package (
+
+    	id           	SERIAL PRIMARY KEY,
+
+    	packagename  	varchar(255) NOT NULL,
+	packageprice 	int NOT NULL,
+	num_songs 	int NOT NULL,
+ 	video_length 	int NOT NULL,
+	description  	TEXT
+);
+
+CREATE TABLE sale (
+
+	id           	SERIAL PRIMARY KEY,
+
+	packageid 	int REFERENCES package(id),
+	customerid 	int REFERENCES customer(id),
+	totalcost 	int NOT NULL,
+	paid	 	bool,
+	sale_date 	date
+);
+
+
+
+
+
+ALTER TABLE conf_date
+
+    ADD session VARCHAR(10);
+
+
+INSERT INTO customer 
+VALUES (
+
+	DEFAULT, 
+
+    	'Fisher',
+	'Ben',
+	2087760707,
+	111,
+	'W 7 S APT 909'
+);
+
+
+INSERT INTO customer 
+VALUES (
+
+	DEFAULT, 
+
+    	'Fisher',
+	'Casslyn',
+	2083137128,
+	111,
+	'W 7 S APT 909'
+);
+
+
+
+INSERT INTO customer 
+VALUES (
+
+	DEFAULT, 
+
+    	'Noorda',
+	'Sam',
+	2082517778,
+	1710,
+	'Satterfield'
+);
+
+
+INSERT INTO customer 
+VALUES (
+
+	DEFAULT, 
+
+    	'Nield',
+	'Bryton',
+	2082512527,
+	420,
+	'Callaway'
+);
+
+
+INSERT INTO package 
+VALUES (
+
+	DEFAULT, 
+
+    	'Basic',
+	399,
+	1,
+	'2.5-3.5 minutes',
+	'This package includes up to 3 hours of coverage, and a discount at Destinations Inn.'
+);
+
+
+
+
+
+
+CREATE TABLE notes (
+
+    id              int primary key,
+
+    note            text,
+    conf_date_id    int references conf_date(id),
+ 
+   speaker_id      int references speakers(id)
+);
+
+CREATE TABLE speakers (
+
+    id              int primary key,
+
+    first           varchar(80),
+    middle          varchar(80),
+    last            varchar(80)
+
+);
+
+CREATE TABLE conf_date (
+
+    id              int primary key,
+
+    month           varchar(10),       
+
+    year            int
+);
+
+ALTER TABLE conf_date
+
+    ADD session VARCHAR(10);
+
+
+INSERT INTO notes 
+VALUES (
+
+    ID int NOT NULL AUTO_INCREMENT, 
+
+    'Awesome!',
+ 
+   (SELECT id
+
+        FROM conf_date
+
+        WHERE month = 'October'
+
+        AND year = 2017
+
+        AND session = 'Priesthood'),
+
+    (SELECT id
+
+        FROM speakers
+
+        WHERE last = 'Monson')
+
+);
+
