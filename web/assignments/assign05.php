@@ -42,9 +42,9 @@
 		</form>
 		<?php
 			if(isset($_POST['customer'])) {
-				foreach ($db->query("SELECT * FROM customer WHERE firstname = '$_POST[customer]' OR lastname = '$_POST[customer]'") as $row)
+				foreach ($db->query("SELECT * FROM customer WHERE firstname = '$_POST[customer]' OR lastname = '$_POST[customer]' OR address = '$_POST[customer]'") as $row)
 				{
-				  echo '<a href="week5TeamActContent.php?id=' . $row['id'] . '"><span class="boldScrip">' . $row['firstname'] . '</span></a>';
+				  echo '<a href="assign05Customer.php?id=' . $row['id'] . '">' . $row['firstname'] . ' ' . $row['lastname'] . '</a>';
 				  echo '<br/>';
 				}
 			}

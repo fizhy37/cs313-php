@@ -10,9 +10,6 @@
 	$dbName = ltrim($dbopts["path"],'/');
 
 	$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-    $statement = $db->query("SELECT * FROM customer WHERE id = '$_GET[id]'");
-    $row = $statement->fetch(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,6 +23,9 @@
 	</head>
 	<body>
         <?php
+            $statement = $db->query("SELECT * FROM customer WHERE id = '$_GET[id]'");
+            $row = $statement->fetch(PDO::FETCH_ASSOC);
+        
 		    echo '<h1>' . $row['firstname'] . ' ' . $row['lastname'] . '/h1>';
 			echo '<span class="boldScrip">' . $row['firstname'] . ' ' . $row['lastname'] . '</span>  - ' . $row['address'] . '<br/>';
 		?>
