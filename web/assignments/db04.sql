@@ -60,7 +60,7 @@ VALUES (
 
 ALTER TABLE package
  	ADD num_songs int,
-	ADD video_length int;
+	ADD video_length TEXT;
 
 INSERT INTO package 
 VALUES (
@@ -68,23 +68,9 @@ VALUES (
     	DEFAULT, 
 
     	'Basic',
-    	'
- 
-   (SELECT id
-
-        FROM conf_date
-
-        WHERE month = 'October'
-
-        AND year = 2017
-
-        AND session = 'Priesthood'),
-
-    (SELECT id
-
-        FROM speakers
-
-        WHERE last = 'Monson')
-
+    	'399',
+	1,
+	'2.5-3.5 minutes',
+	'This package includes up to 3 hours of coverage, and a discount at Destinations Inn.'
 );
 
