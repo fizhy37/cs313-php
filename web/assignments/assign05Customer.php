@@ -26,7 +26,7 @@
             $statement = $db->query("SELECT * FROM customer WHERE id = '$_GET[id]'");
             $row = $statement->fetch(PDO::FETCH_ASSOC);
         
-		    echo '<h1>' . $row['firstname'] . ' ' . $row['lastname'] . '/h1>';
+		    echo '<h1>' . $row['firstname'] . ' ' . $row['lastname'] . '</h1>';
 			echo '<span class="boldScrip">' . $row['firstname'] . ' ' . $row['lastname'] . '</span>  - ' . $row['address'] . '<br/>';
 		?>
 	</body>
