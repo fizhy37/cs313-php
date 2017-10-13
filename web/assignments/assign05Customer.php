@@ -29,10 +29,10 @@
 		    echo '<h1>' . $row['firstname'] . ' ' . $row['lastname'] . '</h1>';
 			echo '<span class="boldScrip">' . $row['firstname'] . ' ' . $row['lastname'] . '</span>  - ' . $row['address'] . '<br/>';
 		
-			foreach ($db->query("SELECT * FROM sale WHERE customerid = '$_GET[id]'") as $row)
+			foreach ($db->query("SELECT * FROM sale WHERE customerid = '$_GET[id]'") as $row2)
 			{
 				$person = $db->query("SELECT * FROM customer WHERE id = '$_GET[id]'");
-				$package = $db->query("SELECT * FROM package WHERE id = $row[packageid]");
+				$package = $db->query("SELECT * FROM package WHERE id = $row2[packageid]");
 			  	echo $person['firstname'] . ' ' . $person['lastname'] . ' purchased the ' . $package['packagename'] . ' package for $' . $package['packageprice'];
 			  	echo '<br/>';
 			}
