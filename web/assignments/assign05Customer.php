@@ -30,11 +30,13 @@
 				echo '<h1>' . $row['firstname'] . ' ' . $row['lastname'] . '</h1>';
 				echo '<span class="boldScrip">' . $row['firstname'] . ' ' . $row['lastname'] . '</span>  - ' . $row['address'] . '<br/>';
 				echo 'Here we go again<br/>';
-				foreach ($db->query("SELECT * FROM sale WHERE customerid = '$_GET[id]'") as $row2)
+				foreach ($db->query("SELECT * FROM sale WHERE customerid = '$_GET[id]'") as $sale)
 				{
-					echo $row['firstname'] . ' paid $' . $row2['totalcost'];
-					$statement3 = $db->query("SELECT * FROM package WHERE id = $row2[packageid]");
-					$row3 = $statement3->fetch(PDO::FETCH_ASSOC);
+					$statement3 = $db->query("SELECT * FROM package WHERE id = $sale[packageid]");
+					$package = $statement3->fetch(PDO::FETCH_ASSOC);
+
+					echo $row['firstname'] . ' paid $' . $row2['totalcost'] . ' for the ' . $package['packagename'] . ' package.<br/>';
+					
 
 					//person = $db->query("SELECT * FROM customer WHERE id = '$_GET[id]'");
 					//$package = $db->query("SELECT * FROM package WHERE id = $row2[packageid]");
