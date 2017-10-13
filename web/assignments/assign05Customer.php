@@ -29,10 +29,13 @@
 			
 				echo '<h1>' . $row['firstname'] . ' ' . $row['lastname'] . '</h1>';
 				echo '<span class="boldScrip">' . $row['firstname'] . ' ' . $row['lastname'] . '</span>  - ' . $row['address'] . '<br/>';
-				echo 'Here we go again';
+				echo 'Here we go again<br/>';
 				foreach ($db->query("SELECT * FROM sale WHERE customerid = '$_GET[id]'") as $row2)
 				{
-					echo $row2['totalcost'];
+					echo $row['firstname'] . ' paid $' . $row2['totalcost'];
+					$statement3 = $db->query("SELECT * FROM package WHERE id = $row2[packageid]");
+					$row3 = $statement3->fetch(PDO::FETCH_ASSOC);
+
 					//person = $db->query("SELECT * FROM customer WHERE id = '$_GET[id]'");
 					//$package = $db->query("SELECT * FROM package WHERE id = $row2[packageid]");
 					//echo $person['firstname'] . ' ' . $person['lastname'] . ' purchased the ' . $package['packagename'] . ' package for $' . $package['packageprice'];
