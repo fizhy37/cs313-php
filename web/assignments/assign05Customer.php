@@ -33,7 +33,7 @@
 			{
 				$person = $db->query("SELECT * FROM customer WHERE id = '$_GET[id]'");
 				$package = $db->query("SELECT * FROM package WHERE id = $row[packageid]");
-			  	echo $row['firstname'] . ' ' . $row['lastname'] . ' purchased the ' . $package['packagename'] . ' package for $' . $package['packageprice'];
+			  	echo $person['firstname'] . ' ' . $person['lastname'] . ' purchased the ' . $package['packagename'] . ' package for $' . $package['packageprice'];
 			  	echo '<br/>';
 			}
 		?>
