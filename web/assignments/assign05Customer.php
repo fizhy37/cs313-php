@@ -35,7 +35,8 @@
 					$statement3 = $db->query("SELECT * FROM package WHERE id = $sale[packageid]");
 					$package = $statement3->fetch(PDO::FETCH_ASSOC);
 
-					echo $row['firstname'] . ' paid $' . $sale['totalcost'] . ' for the ' . $package['packagename'] . ' package.<br/>';
+					echo $row['firstname'] . ' paid $' . $sale['totalcost'] . ' for the ' . $package['packagename'] . ' Package.<br/>';
+					echo 'The ' . $package['packagename'] . ' Package description is: ' . $package['description'] . '<br/>';
 					
 
 					//person = $db->query("SELECT * FROM customer WHERE id = '$_GET[id]'");
