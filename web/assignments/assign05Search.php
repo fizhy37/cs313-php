@@ -27,9 +27,9 @@
 		</style>
 	</head>
 	<body>
-		<h1>Search database</h1>
+		<h1>Search Clients</h1>
 		<form action="" method="POST">
-			<label for="customer">Search Customers: </label><input type="text" name="customer"/>
+			<label for="customer">Search Clients by First or Last Name: </label><input type="text" name="customer"/>
 			<input type="submit" value="Search"/>
 		</form>
 		<?php
