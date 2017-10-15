@@ -238,3 +238,170 @@ INSERT INTO sale VALUES (
 	250,
 	true
 );
+
+INSERT INTO sale VALUES (
+	DEFAULT,
+	4,
+	( SELECT id
+		FROM customer
+		WHERE lastname = 'Judy'
+		AND firstname = 'Ashley'),
+	300,
+	true
+);
+
+INSERT INTO sale VALUES (
+	DEFAULT,
+	3,
+	( SELECT id
+		FROM customer
+		WHERE lastname = 'Monson'
+		AND firstname = 'Bailee'),
+	450,
+	true
+);
+
+INSERT INTO sale VALUES (
+	DEFAULT,
+	1,
+	( SELECT id
+		FROM customer
+		WHERE lastname = 'Bailey'
+		AND firstname = 'Hope'),
+	200,
+	false
+);
+
+INSERT INTO sale VALUES (
+	DEFAULT,
+	3,
+	( SELECT id
+		FROM customer
+		WHERE lastname = 'Pahl'
+		AND firstname = 'Jantzen'),
+	450,
+	true
+);
+
+INSERT INTO sale VALUES (
+	DEFAULT,
+	3,
+	( SELECT id
+		FROM customer
+		WHERE lastname = 'Pahl'
+		AND firstname = 'Bayley'),
+	475,
+	true
+);
+
+INSERT INTO sale VALUES (
+	DEFAULT,
+	3,
+	( SELECT id
+		FROM customer
+		WHERE lastname = 'Hendricks'
+		AND firstname = 'Meghan'),
+	500,
+	true
+);
+
+INSERT INTO sale VALUES (
+	DEFAULT,
+	3,
+	( SELECT id
+		FROM customer
+		WHERE lastname = 'Evans'
+		AND firstname = 'Shelby'),
+	300,
+	true
+);
+
+INSERT INTO sale VALUES (
+	DEFAULT,
+	2,
+	( SELECT id
+		FROM customer
+		WHERE lastname = 'Campbell'
+		AND firstname = 'Hanna'),
+	400,
+	true
+);
+
+INSERT INTO sale VALUES (
+	DEFAULT,
+	3,
+	( SELECT id
+		FROM customer
+		WHERE lastname = 'Nield'
+		AND firstname = 'Bryton'),
+	0,
+	true
+);
+
+INSERT INTO sale VALUES (
+	DEFAULT,
+	3,
+	( SELECT id
+		FROM customer
+		WHERE lastname = 'Clark'
+		AND firstname = 'Michelle'),
+	500,
+	true
+);
+
+INSERT INTO sale VALUES (
+	DEFAULT,
+	1,
+	( SELECT id
+		FROM customer
+		WHERE lastname = 'Landinez'
+		AND firstname = 'Jose'),
+	200,
+	true
+);
+
+INSERT INTO sale VALUES (
+	DEFAULT,
+	2,
+	( SELECT id
+		FROM customer
+		WHERE lastname = 'Preston'
+		AND firstname = 'Christi'),
+	200,
+	true
+);
+
+INSERT INTO sale VALUES (
+	DEFAULT,
+	3,
+	( SELECT id
+		FROM customer
+		WHERE lastname = 'Reese'
+		AND firstname = 'Emily'),
+	250,
+	false
+);
+
+INSERT INTO sale VALUES (
+	DEFAULT,
+	3,
+	( SELECT id
+		FROM customer
+		WHERE lastname = 'Fisher'
+		AND firstname = 'Dallin'),
+	0,
+	true
+);
+
+INSERT INTO sale VALUES (
+	DEFAULT,
+	2,
+	( SELECT id
+		FROM customer
+		WHERE lastname = 'Weston'
+		AND firstname = 'Kayla'),
+	150,
+	true
+);
+
+Basic Package 

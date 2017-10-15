@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  	<title>Assignment 13</title>
-  	<link rel="stylesheet" href="../home.css">
-  	<script type="text/javascript" src="jquery.js"></script>
-  	<script type="text/javascript">
-  		$(document).ready(function(){
+  	<title>Assignment 05</title>
+  	<link rel="stylesheet" href="../homepage.css">
+    <script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+	    $(document).ready(function(){
   			
-  		});
+	    });
   	</script>
 </head>
 
 <body>
-	<h1>Assignment 13</h1>
+    <?php
+	    echo '<h1>Assignment ' . $_GET[num] . '</h1>';
+    ?>
 	<nav>
 		<a class="bar" href="../home.html">Home</a>
 		<a class="bar" href="../assignments.html">Assignments</a>
