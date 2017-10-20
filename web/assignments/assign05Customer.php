@@ -1,17 +1,5 @@
 <?php
-	ini_set('error_reporting', E_ALL);
-	ini_set('display_errors', 'On');  //On or Off
-	$dbUrl = getenv('DATABASE_URL');
-
-	$dbopts = parse_url($dbUrl);
-
-	$dbHost = $dbopts["host"];
-	$dbPort = $dbopts["port"];
-	$dbUser = $dbopts["user"];
-	$dbPassword = $dbopts["pass"];
-	$dbName = ltrim($dbopts["path"],'/');
-
-	$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+	include 'connect_db.php';
 ?>
 <!DOCTYPE html>
 <html>
