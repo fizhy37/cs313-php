@@ -9,8 +9,8 @@ if (isset ($_POST['username'])) {
     //if correct set loggedin = true and redirect else error message
     echo $_POST['username'];
     echo $_POST['password'];
-    if ($db->query("SELECT * FROM user WHERE username = '$_POST[username]' AND password = '$_POST[password]'"))
-    {
+    if ($db->query("SELECT username FROM customer WHERE username = '$_POST[username]'") === $_POST['username']) {
+    //if ($db->query("SELECT * FROM user WHERE username = '$_POST[username]' AND password = '$_POST[password]'"))
         $_SESSION['loggedin'] = true;
         header('Location: assign06.php');
     } else {
