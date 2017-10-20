@@ -79,3 +79,8 @@ a.list:hover {
 	cursor:pointer;
 	color:black;
 }
+
+.center_content {
+	text-align:center;
+	margin:auto;
+}

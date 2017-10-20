@@ -20,6 +20,7 @@
 <html>
 	<head>
 		<title>Database Search</title>
+		<link rel="stylesheet" href="db.css">
 		<style>
 			.boldScrip {
 				font-weight: bold;
