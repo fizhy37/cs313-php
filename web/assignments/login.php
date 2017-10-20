@@ -7,6 +7,8 @@ $errors = array();
 if (isset ($_POST['username'])) {
     //pull from post and check in database
     //if correct set loggedin = true and redirect else error message
+    echo $_POST['username'];
+    echo $_POST['password'];
     if ($db->query("SELECT * FROM user WHERE username = '$_POST[username]' AND password = '$_POST[password]'"))
     {
         $_SESSION['loggedin'] = true;
