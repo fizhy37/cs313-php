@@ -20,7 +20,6 @@
 <html>
 	<head>
 		<title>Database Search</title>
-		<link rel="stylesheet" href="db.css">
 		<style>
 			.boldScrip {
 				font-weight: bold;
@@ -28,7 +27,8 @@
 		</style>
 	</head>
 	<body>
-		<h1>Search Clients</h1>
+		<div class="middle_col">
+		<h1>Search sClients</h1>
 		<form action="" method="POST">
 			<label for="customer">Search Clients by First or Last Name: </label><input type="text" name="customer"/>
 			<input type="submit" value="Search"/>
@@ -42,5 +42,6 @@
 				}
 			}
 		?>
+		</div>
 	</body>
 </html>

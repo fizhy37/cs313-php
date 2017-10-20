@@ -1,0 +1,9 @@
+body {
+    background-color: #484888;
+}
+
+.middle_col {
+    width: 50%;
+    margin:auto;
+    background-color: #eeccaa;
+}

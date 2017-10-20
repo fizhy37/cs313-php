@@ -15,7 +15,6 @@
 <html>
 	<head>
 		<title>Client Results</title>
-		<link rel="stylesheet" href="db.css">
 		<style>
 			.boldScrip {
 				font-weight: bold;
@@ -23,6 +22,7 @@
 		</style>
 	</head>
 	<body>
+		<div class="middle_col">
         <?php
 			if(isset($_GET['id'])) {
 				$statement = $db->query("SELECT * FROM customer WHERE id = '$_GET[id]'");
@@ -40,5 +40,6 @@
 				}
 			}
 		?>
+		</div>
 	</body>
 </html>
