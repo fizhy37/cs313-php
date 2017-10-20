@@ -19,7 +19,7 @@
 try
 {
   $user = 'postgres';
-  $password = 'IloveCasslyn37';
+  $password = '';
   $db = new PDO('pgsql:host=127.0.0.1;dbname=fdm', $user, $password);
 }
 catch (PDOException $ex)

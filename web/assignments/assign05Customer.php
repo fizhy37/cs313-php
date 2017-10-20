@@ -1,5 +1,7 @@
 <?php
-	include 'connect_db.php';
+
+	include 'session_start.php';
+	
 ?>
 <!DOCTYPE html>
 <html>

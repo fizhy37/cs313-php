@@ -28,6 +28,15 @@ CREATE TABLE sale (
 	Paid	 	bool
 );
 
+CREATE TABLE user_account (
+
+	id          	SERIAL PRIMARY KEY,
+
+    	username    	varchar(255) NOT NULL,
+    	password   	varchar(255) NOT NULL,
+    	is_admin 	bool
+);
+
 
 
 

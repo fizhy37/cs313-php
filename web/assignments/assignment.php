@@ -13,7 +13,7 @@
 
 <body>
     <?php
-	    echo '<h1>Assignment ' . $_GET[num] . '</h1>';
+	    echo getenv('DATABASE_URL');
     ?>
 	<nav>
 		<a class="bar" href="../home.html">Home</a>

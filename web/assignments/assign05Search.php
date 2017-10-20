@@ -1,4 +1,6 @@
 <?php
+
+	include 'session_start.php';
 	$dbUrl = getenv('DATABASE_URL');
 
 	if (empty($dbUrl)) {

@@ -1,25 +1,13 @@
 <?php
-	$dbUrl = getenv('DATABASE_URL');
 
-	if (empty($dbUrl)) {
-		// example localhost configuration URL with postgres username and a database called cs313db
-		$dbUrl = "postgres://postgres:password@localhost:5432/cs313db";
-	} else {
-		$dbopts = parse_url($dbUrl);
+	include 'session_start.php';
 
-		$dbHost = $dbopts["host"];
-		$dbPort = $dbopts["port"];
-		$dbUser = $dbopts["user"];
-		$dbPassword = $dbopts["pass"];
-		$dbName = ltrim($dbopts["path"],'/');
-
-		$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-	}
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Database Search</title>
+		<title>Client List</title>
+		<link rel="stylesheet" href="db.css">
 		<style>
 			.boldScrip {
 				font-weight: bold;
@@ -27,6 +15,7 @@
 		</style>
 	</head>
 	<body>
+		<div class="middle_col">
 		<h1>Select a Client</h1>
 		<?php
 			foreach ($db->query("SELECT * FROM customer") as $row)
@@ -36,5 +25,6 @@
 			}
 		?>
 		<br/>
+		</div>
 	</body>
 </html>
