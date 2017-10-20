@@ -1,6 +1,5 @@
-<?php
-
-$dbUrl = getenv('DATABASE_URL');
+<?php       
+    $dbUrl = getenv('DATABASE_URL');
 
 	$dbopts = parse_url($dbUrl);
 
