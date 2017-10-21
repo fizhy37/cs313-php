@@ -14,7 +14,7 @@ if (isset ($_POST['username'])) {
     //pull from post and check in database
     //if correct set loggedin = true and redirect else error message
     if ($_POST['password'] === $firstRow['password']) {
-        start_session();
+        session_start();
         $_SESSION['loggedin'] = true;
         header('Location: assign06.php');
     } else {
