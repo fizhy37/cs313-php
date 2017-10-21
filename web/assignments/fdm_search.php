@@ -20,8 +20,9 @@
     <div class="topper">
         <h1>Search Clients</h1>
 		<form action="" method="POST">
-			<label for="customer">Search by First or Last Name: </label><input type="text" name="customer"/>
-			<input type="submit" value="Search"/>
+			<label for="customer">Search by First or Last Name: </label><br/>
+			<input type="text" name="customer"/><br/>
+			<input class="submission" type="submit" value="Search"/>
 		</form>
 		<div class="nav_list">
 		<?php

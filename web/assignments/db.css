@@ -4,7 +4,7 @@ body {
     margin: 0px;
 }
 
-h1 {
+h1, p {
     text-align: center;
 }
 
@@ -71,4 +71,16 @@ div.nav_list:hover {
 .client_buttons:hover {
     cursor:pointer;
     background-color:#778bad;
+}
+
+.submission {
+    background-color: #0f9b0b;
+    border: none;
+    color: #eeeeef;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-bottom:10px;
 }
