@@ -40,6 +40,18 @@ CREATE TABLE user_account (
 
 
 
+INSERT INTO user_account VALUES (
+
+	DEFAULT, 
+
+    	'admin',
+	'cs313',
+	true
+);
+
+
+
+
 INSERT INTO customer 
 VALUES (
 

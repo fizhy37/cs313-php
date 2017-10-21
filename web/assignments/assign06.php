@@ -1,10 +1,20 @@
 <?php
 
-    include 'session_start.php';
-    include 'header.php';
 
 ?>
+<html>
+<head>
+  	<title>Assignment 05</title>
+  	<link rel="stylesheet" href="../homepage.css">
+  	<script type="text/javascript" src="jquery.js"></script>
+  	<script type="text/javascript">
+  		$(document).ready(function(){
+  			
+  		});
+  	</script>
+</head>
 
+<body>
 <h1>Fisher Digital Media Client Search</h1>
 	<nav>
 		<a class="bar" href="../home.html">Home</a>
