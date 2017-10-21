@@ -4,10 +4,8 @@ body {
     margin: 0px;
 }
 
-h1, p, label, input {
+h1 {
     text-align: center;
-    margin:auto;
-    margin-bottom:5px;
 }
 
 div.topper {
@@ -90,4 +88,9 @@ div.nav_list:hover {
 .submission:hover {
     cursor:pointer;
     background-color: #0b6d08;
+}
+
+.search_settings {
+    margin:15px auto 15px auto;
+    text-align:center;
 }
