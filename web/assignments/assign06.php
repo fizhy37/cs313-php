@@ -24,12 +24,12 @@
 	</nav>
 	<div class="topper">
     <h1>Fisher Digital Media - Clients</h1>
-</div>
-<div class="nav_list">
-    <button id="fdmlist" class="client_buttons" onclick="open_page('fdm_list.php')">List of Clients</button>
-    <button id="fdmsearch" class="client_buttons" onclick="open_page('fdm_search.php')">Search Clients</button>
-    <button id="fdmadd" class="client_buttons" onclick="open_page('fdm_add_client.php')">Add Client</button>
-</div>
+        <div class="nav_list">
+            <button id="fdmlist" class="client_buttons" onclick="open_page('fdm_list.php')">List of Clients</button>
+            <button id="fdmsearch" class="client_buttons" onclick="open_page('fdm_search.php')">Search Clients</button>
+            <button id="fdmadd" class="client_buttons" onclick="open_page('fdm_add_client.php')">Add Client</button>
+        </div>
+    </div>
 
 <?php
     include 'footer.php';
