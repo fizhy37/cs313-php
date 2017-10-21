@@ -15,16 +15,17 @@
         <a class="bar" href="https://www.youtube.com/sabertoothzebras">YouTube</a>
     </nav>
     <div class="topper">
-    <h1>Fisher Digital Media - Client</h1>
-    <div class="search_settings">
-        <form action="login.php" method="POST">
-            <label for="username">Username: </label>
-            <input class="searchbar" type="text" name="username"><br/>
-            <label for="password">Password: </label>
-            <input class="searchbar" type="password" name="password"><br/>
-            <input class="submission" type="submit" value="login">
-        </form>
+        <h1>Fisher Digital Media - Client</h1>
+        <div class="search_settings">
+            <p class="error_message">Invalid username or password</p>
+            <form action="login.php" method="POST">
+                <label for="username">Username: </label>
+                <input class="searchbar" type="text" name="username"><br/>
+                <label for="password">Password: </label>
+                <input class="searchbar" type="password" name="password"><br/>
+                <input class="submission" type="submit" value="login">
+            </form>
+        </div>
     </div>
-</div>
 </body>
 </html>

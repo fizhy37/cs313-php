@@ -103,5 +103,10 @@ div.nav_list:hover {
 }
 
 .error_message {
-    color: red;
+    width:220px;
+    margin:auto;
+    padding:5px;
+    color:white;
+    background-color: red;
+    font-size:14px;
 }
