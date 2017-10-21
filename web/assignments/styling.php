@@ -15,11 +15,16 @@
         <a class="bar" href="https://www.youtube.com/sabertoothzebras">YouTube</a>
     </nav>
     <div class="topper">
-        <h1>Bryton Nield</h1>
-        <p>420 Callaway</p>
-        <div class="nav_list">
-            <button class="client_buttons">Total Cost: $0<br/>Package: Deluxe</button>
-        </div>
+    <h1>Fisher Digital Media - Client</h1>
+    <div class="search_settings">
+        <form action="login.php" method="POST">
+            <label for="username">Username: </label>
+            <input class="searchbar" type="text" name="username"><br/>
+            <label for="password">Password: </label>
+            <input class="searchbar" type="password" name="password"><br/>
+            <input class="submission" type="submit" value="login">
+        </form>
     </div>
+</div>
 </body>
 </html>

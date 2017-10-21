@@ -20,17 +20,15 @@
 	<div class="topper">
 	<?php
 		if(isset($_GET['id'])) {
-			$statement = $db->query("SELECT * FROM customer WHERE id = ?");
-			$result = $query->execute($_GET['id']);
+			$statement = $db->query("SELECT * FROM customer WHERE id = '$_GET[id]'");
 			$row = $statement->fetch(PDO::FETCH_ASSOC);
 		
 			echo '<h1>' . $row['firstname'] . ' ' . $row['lastname'] . '</h1>';
 			echo '<p>' . $row['address'] . '</p><div class="nav_list">';
 			
-			foreach ($db->query("SELECT * FROM sale WHERE customerid = $result") as $sale)
+			foreach ($db->query("SELECT * FROM sale WHERE customerid = '$_GET[id]'") as $sale)
 			{
-				$statement3 = $db->query("SELECT * FROM package WHERE id = ?");
-				$result2 = $query->execute($sale['packageid']);
+				$statement3 = $db->query("SELECT * FROM package WHERE id = $sale[packageid]");
 				$package = $statement3->fetch(PDO::FETCH_ASSOC);
 				echo '<button class="client_buttons">Total Cost: $' . $sale['totalcost'] . '<br/>Package: ' . $package['packagename'] . '</button>';
 			}
