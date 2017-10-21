@@ -16,7 +16,6 @@
 </head>
 
 <body>
-<h1>Fisher Digital Media Client Search</h1>
 	<nav>
 		<a class="bar" href="../home.html">Home</a>
         <a class="bar" href="../assignments.html">Assignments</a>
@@ -24,7 +23,7 @@
 		<a class="bar" href="https://www.youtube.com/sabertoothzebras">YouTube</a>
 	</nav>
 	<div class="topper">
-    <h1>Styling Testing</h1>
+    <h1>Fisher Digital Media - Clients</h1>
 </div>
 <div class="nav_list">
     <button id="fdmlist" class="client_buttons" onclick="open_page('fdm_list.php')">List of Clients</button>
