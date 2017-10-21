@@ -21,12 +21,6 @@ if (isset ($_POST['username'])) {
         array_push($errors, "Incorrect username or password");
     }
 }
-
-if (count($errors) > 0) {
-    foreach ($errors as $error) {
-        echo $error; //<br/>
-    }
-}
 ?>
 <html>
 <head>
@@ -51,6 +45,13 @@ if (count($errors) > 0) {
     <div class="topper">
         <h1>Login</h1>
         <div class="search_settings">
+            <?php
+                if (count($errors) > 0) {
+                    foreach ($errors as $error) {
+                        echo '<p style="color:red;">' . $error . '</p><br/>';
+                    }
+                }
+            ?>
             <form action="login.php" method="POST">
                 <label for="username">Username: </label>
                 <input class="searchbar" type="text" name="username"><br/>

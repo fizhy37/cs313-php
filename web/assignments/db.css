@@ -92,7 +92,6 @@ div.nav_list:hover {
 
 .searchbar {
     margin:15px;
-    text-align:center;
     border: none;
     text-decoration: none;
     font-size: 14px;
@@ -101,4 +100,8 @@ div.nav_list:hover {
 .search_settings {
     margin:auto;
     text-align:center;
+}
+
+.error_message {
+    color: red;
 }
