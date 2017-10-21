@@ -6,6 +6,7 @@
 <html>
 <head>
 	<title>Database Search</title>
+	<link rel="stylesheet" href="db.css">
 	<script src="fdm_js.js"></script>
 </head>
 
@@ -18,20 +19,21 @@
     </nav>
     <div class="topper">
         <h1>Search Clients</h1>
-        <div class="nav_list">
-			<form action="" method="POST">
-				<label for="customer">Search Clients by First or Last Name: </label><input type="text" name="customer"/>
-				<input type="submit" value="Search"/>
-			</form>
-			<?php
-				if(isset($_POST['customer'])) {
-					foreach ($db->query("SELECT * FROM customer WHERE firstname = '$_POST[customer]' OR lastname = '$_POST[customer]' OR address = '$_POST[customer]'") as $row)
-					{
-						echo '<button class="client_buttons" onclick="open_page(\'fdm_customer.php?id=' . $row['id'] . '\')">' . $row['firstname'] . ' ' . $row['lastname'] . '</button>';
-						echo '<br/>';
-					}
+		<form action="" method="POST">
+			<label for="customer">Search by First or Last Name: </label><input type="text" name="customer"/>
+			<input type="submit" value="Search"/>
+		</form>
+		<div class="nav_list">
+		<?php
+			if(isset($_POST['customer'])) {
+				foreach ($db->query("SELECT * FROM customer WHERE firstname = '$_POST[customer]' OR lastname = '$_POST[customer]' OR address = '$_POST[customer]'") as $row)
+				{
+					echo '<button class="client_buttons" onclick="open_page(\'fdm_customer.php?id=' . $row['id'] . '\')">' . $row['firstname'] . ' ' . $row['lastname'] . '</button>';
+					echo '<br/>';
 				}
-			?>
+			}
+		?>
+		</div>
 	</div>
 </body>
 </html>

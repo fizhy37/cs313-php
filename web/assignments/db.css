@@ -59,7 +59,7 @@ div.nav_list:hover {
 .client_buttons {
     background-color: #8fc6dd;
     border: none;
-    color: white;
+    color: #333333;
     width:100%;
     padding: 20px 32px;
     text-align: center;

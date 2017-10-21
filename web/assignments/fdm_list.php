@@ -8,11 +8,6 @@
 <head>
 	<title>Client List</title>
 	<link rel="stylesheet" href="db.css">
-	<style>
-		.boldScrip {
-			font-weight: bold;
-		}
-	</style>
 	<script src="fdm_js.js"></script>
 </head>
 <body>
@@ -32,11 +27,10 @@
 				echo '<br/>';
 			}
 		?>
-            <button id="login" class="client_buttons" onclick="open_page('login.php')">Login</button>
-            <button id="fdmlist" class="client_buttons" onclick="open_page('fdm_list.php')">List of Clients</button>
-            <button id="fdmsearch" class="client_buttons" onclick="open_page('fdm_search.php')">Search Clients</button>
-            <button id="fdmadd" class="client_buttons" onclick="open_page('fdm_add_client.php')">Add Client</button>
-        </div>
+		<button id="fdmlist" class="client_buttons" onclick="open_page('fdm_list.php')">List of Clients</button>
+		<button id="fdmsearch" class="client_buttons" onclick="open_page('fdm_search.php')">Search Clients</button>
+		<button id="fdmadd" class="client_buttons" onclick="open_page('fdm_add_client.php')">Add Client</button>
+		</div>
 	</div>
 </body>
 </html>
