@@ -4,7 +4,7 @@ body {
     margin: 0px;
 }
 
-h1, p {
+h1, p, label, input {
     text-align: center;
 }
 
@@ -83,4 +83,9 @@ div.nav_list:hover {
     display: inline-block;
     font-size: 12px;
     margin-bottom:10px;
+}
+
+.submission:hover {
+    cursor:pointer;
+    background-color: #0b6d08;
 }
