@@ -4,7 +4,7 @@ body {
     margin: 0px;
 }
 
-h1 {
+h1, p {
     text-align: center;
 }
 
@@ -81,8 +81,8 @@ div.nav_list:hover {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 12px;
-    margin:15px auto 15px auto;
+    font-size: 14px;
+    margin:15px auto;
 }
 
 .submission:hover {
@@ -90,7 +90,15 @@ div.nav_list:hover {
     background-color: #0b6d08;
 }
 
+.searchbar {
+    margin:15px;
+    text-align:center;
+    border: none;
+    text-decoration: none;
+    font-size: 14px;
+}
+
 .search_settings {
-    margin:15px auto 15px auto;
+    margin:auto;
     text-align:center;
 }

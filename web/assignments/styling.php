@@ -20,6 +20,13 @@
         </nav>
         <div class="topper">
             <h1>Fisher Digital Media Testing</h1>
+            <div class="search_settings">
+                <form action="" method="POST">
+                    <label for="customer">Search by First or Last Name: </label><br/>
+                    <input class="searchbar" type="text" name="customer"/><br/>
+                    <input class="submission" type="submit" value="Search"/>
+                </form>
+            </div>
             <div class="nav_list">
                 <button id="login" class="client_buttons" onclick="open_page('login.php')">Login</button>
                 <button id="fdmlist" class="client_buttons" onclick="open_page('fdm_list.php')">List of Clients</button>

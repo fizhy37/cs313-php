@@ -19,11 +19,13 @@
     </nav>
     <div class="topper">
         <h1>Search Clients</h1>
-		<form action="" method="POST">
-			<label for="customer">Search by First or Last Name: </label><br/>
-			<input type="text" name="customer"/><br/>
-			<input class="submission" type="submit" value="Search"/>
-		</form>
+		<div class="search_settings">
+			<form action="" method="POST">
+				<label for="customer">Search by First or Last Name: </label><br/>
+				<input class="searchbar" type="text" name="customer"/><br/>
+				<input class="submission" type="submit" value="Search"/>
+			</form>
+		</div>
 		<div class="nav_list">
 		<?php
 			if(isset($_POST['customer'])) {
