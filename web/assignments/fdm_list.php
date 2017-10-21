@@ -13,6 +13,7 @@
 				font-weight: bold;
 			}
 		</style>
+		<script src="fdm_js.js"></script>
 	</head>
 	<body>
 		<div class="middle_col">
@@ -20,7 +21,7 @@
 		<?php
 			foreach ($db->query("SELECT * FROM customer") as $row)
 			{
-                echo '<a href="assign05Customer.php?id=' . $row['id'] . '">' . $row['firstname'] . ' ' . $row['lastname'] . '</a>';
+                echo '<a href="fdm_customer.php?id=' . $row['id'] . '">' . $row['firstname'] . ' ' . $row['lastname'] . '</a>';
                 echo '<br/>';
 			}
 		?>
