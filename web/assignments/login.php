@@ -48,7 +48,7 @@ if (isset ($_POST['username'])) {
             <?php
                 if (count($errors) > 0) {
                     foreach ($errors as $error) {
-                        echo '<p style="color:red;">' . $error . '</p><br/>';
+                        echo '<p class="error_message">' . $error . '</p><br/>';
                     }
                 }
             ?>
