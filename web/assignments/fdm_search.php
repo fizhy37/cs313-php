@@ -32,7 +32,7 @@
 				if(isset($_POST['customer'])) {
 					$sql = "SELECT * FROM customer WHERE firstname ILIKE ? OR lastname ILIKE ? OR address LIKE ?";
 					$query = $db->prepare($sql);
-					$args = array('%$_POST[customer]%', '%$_POST[customer]%', '%$_POST[customer]%');
+					$args = array("%$_POST[customer]%", "%$_POST[customer]%", "%$_POST[customer]%");
 					$result = $query->execute($args);
 					foreach ($query->fetchAll() as $row)
 					{
