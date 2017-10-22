@@ -21,7 +21,7 @@
     <div class="topper">
         <h1>Select a Client</h1>
         <div class="nav_list">
-			<button class="other_buttons" onclick="open_page('fdm_list.php')">Go back</button>
+			<button class="other_buttons" onclick="open_page('assign06.php')">Go back</button>
 			<?php
 				foreach ($db->query("SELECT * FROM customer") as $row)
 				{

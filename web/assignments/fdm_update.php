@@ -33,7 +33,7 @@
 		}
 		if (!empty($_POST["firstname"]) && !empty($_POST["lastname"]) && 
 			!empty($_POST["phone"]) && !empty($_POST["address"])) {
-				$st = $db->prepare("INSERT INTO customer (firstname, lastname, phone, address) VALUES(:firstname, :lastname, :phone, :address)");
+				$st = $db->prepare("UPDATE customer SET (firstname, lastname, phone, address) = (:firstname, :lastname, :phone, :address) WHERE id = '$_GET[id]'");
 				$st->execute(array(':firstname' => $firstname, ':lastname' => $lastname, ':phone' => $phone, ':address' => $address));
 				$id = (int)$db->lastInsertId();
 				header("Location: assign06.php");
@@ -89,7 +89,7 @@
                 <input class="searchbar" type="text" name="phone" value="<?php echo $row[phone]?>" required/><br/>
                 <label for="address">Address: </label><br/>
                 <input class="searchbar" type="text" name="address" value="<?php echo $row[address]?>" required/><br/>
-                <input class="submission" type="submit" value="Add Client"/>
+                <input class="submission" type="submit" value="Update Client"/>
             </form>
         </div>
 	</div>
