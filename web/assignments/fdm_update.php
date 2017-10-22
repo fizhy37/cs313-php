@@ -66,7 +66,6 @@
         <a class="bar" href="../assignments.html">Assignments</a>
         <a class="bar" href="http://fisherdigitalmedia.businesscatalyst.com">FDM Website</a>
 		<a class="bar" href="https://www.youtube.com/sabertoothzebras">YouTube</a>
-		<a class="bar" href="assign06.php">Assignment 06</a>
     </nav>
     <div class="topper">
         <h1>Add a Client</h1>
@@ -91,6 +90,9 @@
                 <input class="searchbar" type="text" name="address" value="<?php echo $row[address]?>" required/><br/>
                 <input class="submission" type="submit" value="Update Client"/>
             </form>
+        </div>
+        <div class="nav_list">
+            <button class="other_buttons" onclick="open_page('assign06.php')">Go back</button>
         </div>
 	</div>
 </body>

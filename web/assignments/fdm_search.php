@@ -16,7 +16,6 @@
         <a class="bar" href="../assignments.html">Assignments</a>
         <a class="bar" href="http://fisherdigitalmedia.businesscatalyst.com">FDM Website</a>
 		<a class="bar" href="https://www.youtube.com/sabertoothzebras">YouTube</a>
-		<a class="bar" href="assign06.php">Assignment 06</a>
     </nav>
     <div class="topper">
         <h1>Search Clients</h1>
@@ -28,15 +27,16 @@
 			</form>
 		</div>
 		<div class="nav_list">
-		<?php
-			if(isset($_POST['customer'])) {
-				foreach ($db->query("SELECT * FROM customer WHERE firstname = '$_POST[customer]' OR lastname = '$_POST[customer]' OR address = '$_POST[customer]'") as $row)
-				{
-					echo '<button class="client_buttons" onclick="open_page(\'fdm_customer.php?id=' . $row['id'] . '\')">' . $row['firstname'] . ' ' . $row['lastname'] . '</button>';
-					echo '<br/>';
+			<button class="other_buttons" onclick="open_page('assign06.php')">Go back</button>
+			<?php
+				if(isset($_POST['customer'])) {
+					foreach ($db->query("SELECT * FROM customer WHERE firstname = '$_POST[customer]' OR lastname = '$_POST[customer]' OR address = '$_POST[customer]'") as $row)
+					{
+						echo '<button class="client_buttons" onclick="open_page(\'fdm_customer.php?id=' . $row['id'] . '\')">' . $row['firstname'] . ' ' . $row['lastname'] . '</button>';
+						echo '<br/>';
+					}
 				}
-			}
-		?>
+			?>
 		</div>
 	</div>
 </body>
