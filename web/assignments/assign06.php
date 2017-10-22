@@ -23,7 +23,6 @@ include 'session_start.php';
         <a class="bar" href="../assignments.html">Assignments</a>
         <a class="bar" href="http://fisherdigitalmedia.businesscatalyst.com">FDM Website</a>
         <a class="bar" href="https://www.youtube.com/sabertoothzebras">YouTube</a>
-        <a class="bar" href="assign06.php">Assignment 06</a>
     </nav>
     <div class="topper">
         <h1>Fisher Digital Media Clients</h1>
