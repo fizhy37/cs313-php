@@ -35,6 +35,7 @@
 			echo '<button class="other_buttons" onclick="open_page(\'fdm_update.php?id=' . $_GET['id'] . '\')">Update ' . $row['firstname'] . ' ' . $row['lastname'] . '</button>';
 		}
 	?>
+	<button class="other_buttons" onclick="open_page('fdm_search.php')">Go back</button>
 	</div>
 	</div>
 </body>
