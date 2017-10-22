@@ -110,3 +110,11 @@ div.nav_list:hover {
     background-color: red;
     font-size:14px;
 }
+
+.add_client {
+    margin-left:25%;
+}
+
+.add_form {
+    text-align:left;
+}

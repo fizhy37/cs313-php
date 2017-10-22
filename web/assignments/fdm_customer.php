@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Client Results</title>
+	<title>Client Details</title>
 	<link rel="stylesheet" href="db.css">
 	<script src="fdm_js.js"></script>
 </head>
@@ -16,6 +16,7 @@
 		<a class="bar" href="../assignments.html">Assignments</a>
 		<a class="bar" href="http://fisherdigitalmedia.businesscatalyst.com">FDM Website</a>
 		<a class="bar" href="https://www.youtube.com/sabertoothzebras">YouTube</a>
+		<a class="bar" href="assign06.php">Assignment 06</a>
 	</nav>
 	<div class="topper">
 	<?php

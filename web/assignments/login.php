@@ -24,7 +24,7 @@ if (isset ($_POST['username'])) {
 ?>
 <html>
 <head>
-  	<title>Assignment 06</title>
+  	<title>Login</title>
     <link rel="stylesheet" href="db.css">
     <script src="fdm_js.js"></script>
   	<script type="text/javascript" src="jquery.js"></script>
@@ -41,6 +41,7 @@ if (isset ($_POST['username'])) {
         <a class="bar" href="../assignments.html">Assignments</a>
         <a class="bar" href="http://fisherdigitalmedia.businesscatalyst.com">FDM Website</a>
         <a class="bar" href="https://www.youtube.com/sabertoothzebras">YouTube</a>
+        <a class="bar" href="assign06.php">Assignment 06</a>
     </nav>
     <div class="topper">
         <h1>Login</h1>
