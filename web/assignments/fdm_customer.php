@@ -25,7 +25,7 @@
 			$row = $statement->fetch(PDO::FETCH_ASSOC);
 		
 			echo '<h1>' . $row['firstname'] . ' ' . $row['lastname'] . '</h1>';
-			echo '<p>' . $row['address'] . '</p><div class="nav_list">';
+			echo '<p>' . $row['address'] . ' | ' . $row['phone'] . '</p><div class="nav_list">';
 			
 			foreach ($db->query("SELECT * FROM sale WHERE customerid = '$_GET[id]'") as $sale)
 			{
