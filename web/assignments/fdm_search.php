@@ -30,7 +30,7 @@
 			<button class="other_buttons" onclick="open_page('assign06.php')">Go back</button>
 			<?php
 				if(isset($_POST['customer'])) {
-					foreach ($db->query("SELECT * FROM customer WHERE firstname LIKE '$_POST[customer]' OR lastname LIKE '$_POST[customer]' OR address LIKE '$_POST[customer]'") as $row)
+					foreach ($db->query("SELECT * FROM customer WHERE firstname ILIKE '$_POST[customer]' OR lastname ILIKE '$_POST[customer]' OR address LIKE '$_POST[customer]'") as $row)
 					{
 						echo '<button class="client_buttons" onclick="open_page(\'fdm_customer.php?id=' . $row['id'] . '\')">' . $row['firstname'] . ' ' . $row['lastname'] . '</button>';
 						echo '<br/>';
