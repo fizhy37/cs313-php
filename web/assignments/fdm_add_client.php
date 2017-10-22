@@ -76,7 +76,7 @@
             ?>
             <form action="" method="POST">
                 <label for="firstname">First Name: </label><br/>
-                <input class="searchbar" type="text" name="firstname" required/><br/>
+                <input class="searchbar" type="text" name="firstname" autofocus required/><br/>
                 <label for="lastname">Last Name: </label><br/>
                 <input class="searchbar" type="text" name="lastname" required/><br/>
                 <label for="phone">Phone Number: </label><br/>

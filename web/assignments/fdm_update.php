@@ -81,7 +81,7 @@
             ?>
             <form action="" method="POST">
                 <label for="firstname">First Name: </label><br/>
-                <input class="searchbar" type="text" name="firstname" value="<?php echo $row[firstname]?>" required/><br/>
+                <input class="searchbar" type="text" name="firstname" value="<?php echo $row[firstname]?>" autofocus required/><br/>
                 <label for="lastname">Last Name: </label><br/>
                 <input class="searchbar" type="text" name="lastname" value="<?php echo $row[lastname]?>" required/><br/>
                 <label for="phone">Phone Number: </label><br/>

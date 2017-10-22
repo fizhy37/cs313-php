@@ -55,7 +55,7 @@ if (isset ($_POST['username'])) {
             ?>
             <form action="login.php" method="POST">
                 <label for="username">Username: </label>
-                <input class="searchbar" type="text" name="username"><br/>
+                <input class="searchbar" type="text" name="username" autofocus><br/>
                 <label for="password">Password: </label>
                 <input class="searchbar" type="password" name="password"><br/>
                 <input class="submission" type="submit" value="login">

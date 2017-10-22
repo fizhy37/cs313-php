@@ -22,7 +22,7 @@
 		<div class="search_settings">
 			<form action="" method="POST">
 				<label for="customer">Search by First or Last Name: </label><br/>
-				<input class="searchbar" type="text" name="customer"/><br/>
+				<input class="searchbar" type="text" name="customer" autofocus/><br/>
 				<input class="submission" type="submit" value="Search"/>
 			</form>
 		</div>
