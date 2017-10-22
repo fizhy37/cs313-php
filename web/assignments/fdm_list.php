@@ -22,7 +22,7 @@
         <div class="nav_list">
 			<button class="other_buttons" onclick="open_page('assign06.php')">Go back</button>
 			<?php
-				foreach ($db->query("SELECT * FROM customer") as $row)
+				foreach ($db->query("SELECT * FROM customer ORDER BY lastname ASC") as $row)
 				{
 					echo '<button class="client_buttons" onclick="open_page(\'fdm_customer.php?id=' . $row['id'] . '\')">' . $row['firstname'] . ' ' . $row['lastname'] . '</button>';
 					echo '<br/>';
