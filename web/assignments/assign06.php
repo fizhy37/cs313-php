@@ -1,5 +1,6 @@
 <?php
 
+include 'session_start.php';
 
 ?>
 <!DOCTYPE html>
@@ -25,9 +26,9 @@
         <a class="bar" href="assign06.php">Assignment 06</a>
     </nav>
     <div class="topper">
-        <h1>Fisher Digital Media - Client</h1>
+        <h1>Fisher Digital Media Clients</h1>
         <div class="nav_list">
-            <button id="login" class="client_buttons" onclick="open_page('login.php')">Login</button>
+            <button id="logout" class="client_buttons" onclick="open_page('logout.php')">Logout</button>
             <button id="fdmlist" class="client_buttons" onclick="open_page('fdm_list.php')">List of Clients</button>
             <button id="fdmsearch" class="client_buttons" onclick="open_page('fdm_search.php')">Search Clients</button>
             <button id="fdmadd" class="client_buttons" onclick="open_page('fdm_add_client.php')">Add Client</button>
