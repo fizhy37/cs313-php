@@ -66,6 +66,15 @@
     <div class="topper">
         <h1>Add a Client</h1>
         <div class="search_settings">
+            <?php
+                if (count($errors) > 0) {
+                    echo '<p class="error_message">';
+                    foreach ($errors as $error) {
+                        echo $error . '<br/>';
+                    }
+                    echo '</p>';
+                }
+            ?>
             <form action="" method="POST">
                 <label for="firstname">First Name: </label><br/>
                 <input class="searchbar" type="text" name="firstname" required/><br/>
