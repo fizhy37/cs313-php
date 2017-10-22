@@ -33,7 +33,7 @@
 			{
 				$statement3 = $db->query("SELECT * FROM package WHERE id = $sale[packageid]");
 				$package = $statement3->fetch(PDO::FETCH_ASSOC);
-				echo '<button class="client_buttons">Total Cost: $' . $sale['totalcost'] . '<br/>Package: ' . $package['packagename'] . '</button>';
+				echo '<button class="client_detail">Total Cost: $' . $sale['totalcost'] . '<br/>Package: ' . $package['packagename'] . '</button>';
 			}
 		}
 	?>

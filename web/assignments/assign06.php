@@ -31,7 +31,6 @@
             <button id="fdmlist" class="client_buttons" onclick="open_page('fdm_list.php')">List of Clients</button>
             <button id="fdmsearch" class="client_buttons" onclick="open_page('fdm_search.php')">Search Clients</button>
             <button id="fdmadd" class="client_buttons" onclick="open_page('fdm_add_client.php')">Add Client</button>
-            <button id="fdmupdate" class="client_buttons" onclick="open_page('fdm_update.php')">Update Client</button>
         </div>
     </div>
 
