@@ -86,6 +86,9 @@
                 <input class="submission" type="submit" value="Add Client"/>
             </form>
         </div>
+        <div class="nav_list">
+            <button class="other_buttons" onclick="open_page('assign06.php')">Go back</button>
+        </div>
 	</div>
 </body>
 </html>
