@@ -55,7 +55,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Add Client</title>
+	<title>Update Client</title>
 	<link rel="stylesheet" href="db.css">
 	<script src="fdm_js.js"></script>
 </head>
