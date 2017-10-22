@@ -25,7 +25,9 @@
 			$row = $statement->fetch(PDO::FETCH_ASSOC);
 		
 			echo '<h1>' . $row['firstname'] . ' ' . $row['lastname'] . '</h1>';
-			echo '<p>' . $row['address'] . ' | ' . $row['phone'] . '</p><div class="nav_list">';
+			echo '<p>' . $row['phone'] . '<br/>' . $row['phone'] . '</p><div class="nav_list">';
+			echo '<button class="other_buttons" onclick="open_page(\'fdm_update.php?id=' . $_GET['id'] . '\')">Update ' . $row['firstname'] . ' ' . $row['lastname'] . '</button>';
+			
 			
 			foreach ($db->query("SELECT * FROM sale WHERE customerid = '$_GET[id]'") as $sale)
 			{

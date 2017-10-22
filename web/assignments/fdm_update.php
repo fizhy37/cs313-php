@@ -45,7 +45,12 @@
 		$data = stripslashes($data);
 		$data = htmlspecialchars($data);
 		return $data;
-	}
+    }
+    
+    if(isset($_GET['id'])) {
+        $statement = $db->query("SELECT * FROM customer WHERE id = '$_GET[id]'");
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -77,13 +82,13 @@
             ?>
             <form action="" method="POST">
                 <label for="firstname">First Name: </label><br/>
-                <input class="searchbar" type="text" name="firstname" required/><br/>
+                <input class="searchbar" type="text" name="firstname" value="<?php echo $row[firstname]?>" required/><br/>
                 <label for="lastname">Last Name: </label><br/>
-                <input class="searchbar" type="text" name="lastname" required/><br/>
+                <input class="searchbar" type="text" name="lastname" value="<?php echo $row[lastname]?>" required/><br/>
                 <label for="phone">Phone Number: </label><br/>
-                <input class="searchbar" type="text" name="phone" required/><br/>
+                <input class="searchbar" type="text" name="phone" value="<?php echo $row[phone]?>" required/><br/>
                 <label for="address">Address: </label><br/>
-                <input class="searchbar" type="text" name="address" required/><br/>
+                <input class="searchbar" type="text" name="address" value="<?php echo $row[address]?>" required/><br/>
                 <input class="submission" type="submit" value="Add Client"/>
             </form>
         </div>

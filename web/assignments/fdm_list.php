@@ -21,16 +21,14 @@
     <div class="topper">
         <h1>Select a Client</h1>
         <div class="nav_list">
-		<?php
-			foreach ($db->query("SELECT * FROM customer") as $row)
-			{
-				echo '<button class="client_buttons" onclick="open_page(\'fdm_customer.php?id=' . $row['id'] . '\')">' . $row['firstname'] . ' ' . $row['lastname'] . '</button>';
-				echo '<br/>';
-			}
-		?>
-		<button id="fdmlist" class="client_buttons" onclick="open_page('fdm_list.php')">List of Clients</button>
-		<button id="fdmsearch" class="client_buttons" onclick="open_page('fdm_search.php')">Search Clients</button>
-		<button id="fdmadd" class="client_buttons" onclick="open_page('fdm_add_client.php')">Add Client</button>
+			<button class="other_buttons" onclick="open_page('fdm_list.php')">Go back</button>
+			<?php
+				foreach ($db->query("SELECT * FROM customer") as $row)
+				{
+					echo '<button class="client_buttons" onclick="open_page(\'fdm_customer.php?id=' . $row['id'] . '\')">' . $row['firstname'] . ' ' . $row['lastname'] . '</button>';
+					echo '<br/>';
+				}
+			?>
 		</div>
 	</div>
 </body>
