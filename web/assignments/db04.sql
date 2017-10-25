@@ -425,4 +425,24 @@ INSERT INTO sale VALUES (
 	true
 );
 
-Basic Package 
+SELECT * FROM sale
+INNER JOIN customer ON sale.customerid = customer.id;
+id | packageid | customerid | totalcost | paid | video | id | lastname | firstname | phone | address
+
+UPDATE sale SET video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/MTc4AEj150c?rel=0" frameborder="0" allowfullscreen></iframe>' WHERE customerid = 6;
+UPDATE sale SET video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/AaPfj9FYcEM?rel=0" frameborder="0" allowfullscreen></iframe>' WHERE customerid = 15;
+UPDATE sale SET video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/cs8F2NYnPH0?rel=0" frameborder="0" allowfullscreen></iframe>' WHERE customerid = 16;
+UPDATE sale SET video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/c-0EWuUkvh8?rel=0" frameborder="0" allowfullscreen></iframe>' WHERE customerid = 7;
+UPDATE sale SET video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/hHm30XHTw7c?rel=0" frameborder="0" allowfullscreen></iframe>' WHERE customerid = 8;
+UPDATE sale SET video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/i8RK9E0TCiQ?rel=0" frameborder="0" allowfullscreen></iframe>' WHERE customerid = 19;
+UPDATE sale SET video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/gT41G7zoSPM?rel=0" frameborder="0" allowfullscreen></iframe>' WHERE customerid = 18;
+UPDATE sale SET video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/NyRQZUcdoXw?rel=0" frameborder="0" allowfullscreen></iframe>' WHERE customerid = 11;
+UPDATE sale SET video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/xfcAS9qKNVU?rel=0" frameborder="0" allowfullscreen></iframe>' WHERE customerid = 14;
+UPDATE sale SET video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/uegEJue4qRU?rel=0" frameborder="0" allowfullscreen></iframe>' WHERE customerid = 13;
+UPDATE sale SET video = '<iframe width="560" height="315" src="https://www.youtube.com/embed/eBzI-xcagL0?rel=0" frameborder="0" allowfullscreen></iframe>' WHERE customerid = 12;
+UPDATE sale SET video = '' WHERE customerid = ;
+UPDATE sale SET video = '' WHERE customerid = ;
+UPDATE sale SET video = '' WHERE customerid = ;
+UPDATE sale SET video = '' WHERE customerid = ;
+UPDATE sale SET video = '' WHERE customerid = ;
+UPDATE sale SET video = '' WHERE customerid = ;
