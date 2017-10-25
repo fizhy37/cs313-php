@@ -17,6 +17,11 @@ div.topper {
     margin-bottom:50px;
 }
 
+div.video {
+	margin:auto;
+	width:100%;
+}
+
 nav {
 	background-color:#353f49;
 	padding:15px;
