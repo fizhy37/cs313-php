@@ -31,6 +31,7 @@
 				$statement3 = $db->query("SELECT * FROM package WHERE id = $sale[packageid]");
 				$package = $statement3->fetch(PDO::FETCH_ASSOC);
 				echo '<button class="client_detail">Total Cost: $' . $sale['totalcost'] . '<br/>Package: ' . $package['packagename'] . '</button>';
+				echo $sale['video'];
 			}
 			echo '<button class="other_buttons" onclick="open_page(\'fdm_update.php?id=' . $_GET['id'] . '\')">Update ' . $row['firstname'] . ' ' . $row['lastname'] . '</button>';
 		}
