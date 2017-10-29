@@ -11,7 +11,7 @@ if ($stmt->execute(array($_POST['username']))) {
     $firstRow = $data[0];
 }
 
-if (!empty($_POST['username']) && !empty($_POST['password'])) {
+if (!empty($_POST['username']) && !empty($_POST['username'])) {
     //pull from post and check in database
     //if correct set loggedin = true and redirect else error message
     /* 
