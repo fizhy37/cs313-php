@@ -110,10 +110,9 @@ function test_input($data) {
                 <input class="searchbar" type="password" name="password"><br/>
         
                 <input class="submission" type="submit" value="login">
-        
             </form>
         </div>
-        <a class="bar" href="fdm_signup.php">Don't have an account? Sign up here.</a>
+        <a class="client_buttons" href="fdm_signup.php">Don't have an account? Sign up here.</a>
     </div>
 <?php
 include 'footer.php';

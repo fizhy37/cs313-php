@@ -66,7 +66,7 @@
         <a class="bar" href="https://www.youtube.com/sabertoothzebras">YouTube</a>
     </nav>
 	<div class="topper">
-        <h2>Sign up!</h2>
+        <h1>Sign up!</h1>
 		<div class="search_settings">
 			<?php
 				if (count($errors) > 0) {
@@ -77,16 +77,16 @@
 			?>
 			<form action="" method="POST">
 				
-				<label for="username">Enter a unique username</label>
+				<label for="username">Enter a username:</label>
 				<input class="searchbar" type="text" name="username" value="<?php echo $username;?>" autofocus required><br/>
 
-				<label for="password">Enter a password</label>
+				<label for="password">Enter a password:</label>
 				<input class="searchbar" type="password" name="password"><br/>
 
-				<input class="submission" type="submit">
+				<input class="submission" type="submit" value="Sign Up">
 			</form>
 		</div>
-        <a class="bar" href="login.php">Login</a>
+        <a class="client_buttons" href="login.php">Login</a>
 	</div>
 </body>
 </html>
