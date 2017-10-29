@@ -52,12 +52,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $st->execute();
         $row = $st->fetch();
         $passFromDB = $row['password'];
-        echo $passFromDB;
-        echo "<br/>";
-        echo $row['username'];
-        echo "<br/>";
-        echo $password;
         if (password_verify($password, $passFromDB)) {
+            session_start();
             $_SESSION['username'] = $username;
             header("location: assign06.php");
             die();
