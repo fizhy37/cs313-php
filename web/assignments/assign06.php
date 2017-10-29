@@ -25,7 +25,9 @@ include 'session_start.php';
         <a class="bar" href="https://www.youtube.com/sabertoothzebras">YouTube</a>
     </nav>
     <div class="topper">
-        <h1>Fisher Digital Media Clients</h1>
+        <?php
+            echo "<h1>Welcome $_SESSION[username]</h1>";
+        ?>
         <div class="nav_list">
             <button id="logout" class="client_buttons" onclick="open_page('logout.php')">Logout</button>
             <button id="fdmlist" class="client_buttons" onclick="open_page('fdm_list.php')">List of Clients</button>
