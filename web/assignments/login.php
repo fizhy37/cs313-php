@@ -40,6 +40,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             array_push($errors, "Incorrect username or password");
         }
     }
+}
 ?>
 <html>
 <head>
