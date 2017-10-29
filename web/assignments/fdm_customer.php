@@ -44,7 +44,7 @@
 			{
 				$statement3 = $db->query("SELECT * FROM package WHERE id = $sale[packageid]");
 				$package = $statement3->fetch(PDO::FETCH_ASSOC);
-				echo $sale['video'];
+				echo "<center>" . $sale['video'] . "</center>;
 			}
 		}
 	?>
