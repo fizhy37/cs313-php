@@ -1,10 +1,10 @@
 <?php
 	require('connect_db.php');
-	require('session_start.php')
+	require('session_start.php');
 	//require('password.php');
 	
-	if (isset($_SESSION['username'])) {
-		echo "<script>window.alert('You are signed in already.');</script>";
+	if (isset ($_SESSION['username'])) {
+		//echo "<script>window.alert('You are signed in already.');</script>";
 		header("location: assign06.php");
 		die();
 	}
