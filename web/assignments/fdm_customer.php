@@ -38,7 +38,6 @@
 	<button class="other_buttons" onclick="open_page('assign06.php')">Go back</button>
 	</div>
 	</div>
-	<div class="video">
 	<?php
 		if(isset($_GET['id'])) {
 			foreach ($db->query("SELECT * FROM sale WHERE customerid = '$_GET[id]'") as $sale)
@@ -49,6 +48,5 @@
 			}
 		}
 	?>
-	</div>
 </body>
 </html>

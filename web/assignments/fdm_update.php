@@ -4,7 +4,7 @@
     
     $db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 	
-	$firstname = $lastname = $phone = $address = "";
+	$firstname = $lastname = $phone = $address = $videoURL = "";
 	$errors = array();
 	
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -27,9 +27,6 @@
 			array_push($errors, "Address is required");
 		} else {
 			$address = test_input($_POST["address"]);
-		}
-		if (empty($_POST["topic"])) {
-			$topicError = "Topic is required";
 		}
 		if (!empty($_POST["firstname"]) && !empty($_POST["lastname"]) && 
 			!empty($_POST["phone"]) && !empty($_POST["address"])) {
@@ -80,15 +77,27 @@
                 }
             ?>
             <form action="" method="POST">
+
                 <label for="firstname">First Name: </label><br/>
                 <input class="searchbar" type="text" name="firstname" value="<?php echo $row[firstname]?>" autofocus required/><br/>
+
                 <label for="lastname">Last Name: </label><br/>
                 <input class="searchbar" type="text" name="lastname" value="<?php echo $row[lastname]?>" required/><br/>
+
                 <label for="phone">Phone Number: </label><br/>
                 <input class="searchbar" type="text" name="phone" value="<?php echo $row[phone]?>" required/><br/>
+
                 <label for="address">Address: </label><br/>
                 <input class="searchbar" type="text" name="address" value="<?php echo $row[address]?>" required/><br/>
+
+				<?php
+					//if user = admin -> display video URL;
+					//<label for="videoURL">Embed code: </label><br/>
+					//<input class="searchbar" type="text" name="address" value="<?php echo $row[videoURL] ? >"/>
+				?>
+
                 <input class="submission" type="submit" value="Update Client"/>
+				
             </form>
         </div>
         <div class="nav_list">
