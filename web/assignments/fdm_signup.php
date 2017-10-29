@@ -85,8 +85,8 @@
 
 				<input class="submission" type="submit" value="Sign Up">
 			</form>
-			<a class="other_buttons" href="login.php">Already have an account? Login</a>
 		</div>
 	</div>
+	<a class="other_buttons" href="login.php">Already have an account? Login</a>
 </body>
 </html>
