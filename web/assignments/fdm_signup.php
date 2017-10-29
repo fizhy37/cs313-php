@@ -1,6 +1,5 @@
 <?php
 	require('connect_db.php');
-	require('session_start.php');
 	//require('password.php');
 	
 	if (isset ($_SESSION['username'])) {

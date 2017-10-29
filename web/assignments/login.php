@@ -1,14 +1,20 @@
 <?php
+
 include 'connect_db.php';
+
+$username = "";
 $errors = array();
+
 $stmt = $db->prepare("SELECT * FROM user_account WHERE username = ?");
 if ($stmt->execute(array($_POST['username']))) {
     $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $firstRow = $data[0];
 }
+
 if (isset ($_POST['username'])) {
     //pull from post and check in database
     //if correct set loggedin = true and redirect else error message
+    /* 
     if ($_POST['password'] === $firstRow['password']) {
         session_start();
         $_SESSION['loggedin'] = true;
@@ -16,7 +22,38 @@ if (isset ($_POST['username'])) {
     } else {
         array_push($errors, "Incorrect username or password");
     }
+    */
+    if (password_verify($password, $passFromDB)) {
+        session_start();
+        $_SESSION['username'] = $username;
+        header("location: assign06.php");
+        die();
+    } else {
+        array_push($errors, "Incorrect username or password");
+    }
 }
+
+/*
+if (!empty($_POST['username']) && !empty($_POST['password'])) {
+    $st = $db->prepare("SELECT * FROM user_account WHERE username = '$username'");
+    $st->execute();
+    $row = $st->fetch();
+    $passFromDB = $row['password'];
+    echo $passFromDB;
+    echo "<br/>";
+    echo $row['username'];
+    echo "<br/>";
+    echo $password;
+    if (password_verify($password, $passFromDB)) {
+        session_start();
+        $_SESSION['username'] = $username;
+        header("location: assign06.php");
+        die();
+    } else {
+        array_push($errors, "Incorrect username or password");
+    }
+}
+*/
 ?>
 <html>
 <head>
