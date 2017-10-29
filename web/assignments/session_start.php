@@ -2,7 +2,7 @@
 
 session_start();
 
-if (!isset ($_SESSION['loggedin']) || !$_SESSION['loggedin']) { 
+if (!isset ($_SESSION['username'])) { 
     header('Location: login.php');
     die();
     exit;
