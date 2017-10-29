@@ -34,6 +34,7 @@ if (isset ($_POST['username'])) {
     */
 }
 
+$username = "";
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($_POST['username'])) {
@@ -47,30 +48,30 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         array_push($errors, "You must enter your password");
     }
     if (!empty($_POST['username']) && !empty($_POST['username'])) {
-        echo "HERE";
-        $st = $db->prepare("SELECT username FROM week7.user WHERE username = '$username'");
+        $st = $db->prepare("SELECT * FROM user_account WHERE username = '$username'");
         $st->execute();
-        $count = (int)$st->rowCount();
-        if ($count == 0) {
-            echo "count is 0";
-            $hashedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
-            $st = $db->prepare("INSERT INTO week7.user (username, password, is_admin) VALUES('$username', '$hashedPassword', false)");
-            $st->execute();
+        $row = $st->fetch();
+        $passFromDB = $row['password'];
+        echo $passFromDB;
+        echo "<br/>";
+        echo $row['username'];
+        echo "<br/>";
+        echo $password;
+        if (password_verify($password, $passFromDB)) {
             $_SESSION['username'] = $username;
-            header("location: week7TeamWelcome.php");
+            header("location: assign06.php");
             die();
         } else {
-            echo "count is not 0";
-            array_push($errors, "Your username already exists.");
+            array_push($errors, "Invalid username or password");
         }
     }
 }
 
 function test_input($data) {
-    //$data = trim($data);
-    //$data = stripslashes($data);
-    //$data = htmlspecialchars($data);
-    return $data;
+  //$data = trim($data);
+  //$data = stripslashes($data);
+  //$data = htmlspecialchars($data);
+  return $data;
 }
 
 ?>
