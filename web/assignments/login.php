@@ -113,7 +113,7 @@ function test_input($data) {
         
             </form>
         </div>
-        <a href="fdm_signup.php">Don't have an account? Sign up here.</a>
+        <a class="bar" href="fdm_signup.php">Don't have an account? Sign up here.</a>
     </div>
 <?php
 include 'footer.php';

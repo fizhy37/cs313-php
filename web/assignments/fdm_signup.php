@@ -78,15 +78,15 @@
 			<form action="" method="POST">
 				
 				<label for="username">Enter a unique username</label>
-				<input class="searchbar" type="text" name="username" value="<?php echo $username;?>" autofocus required>
+				<input class="searchbar" type="text" name="username" value="<?php echo $username;?>" autofocus required><br/>
 
 				<label for="password">Enter a password</label>
-				<input class="searchbar" type="password" name="password">
+				<input class="searchbar" type="password" name="password"><br/>
 
-				<input type="submit">
+				<input class="submission" type="submit">
 			</form>
 		</div>
-        <a href="login.php">Login</a>
+        <a class="bar" href="login.php">Login</a>
 	</div>
 </body>
 </html>
