@@ -112,8 +112,8 @@ function test_input($data) {
                 <input class="submission" type="submit" value="Login">
             </form>
         </div>
-        <a class="other_buttons" href="fdm_signup.php">Don't have an account? Sign up here.</a>
     </div>
+    <a class="other_buttons" href="fdm_signup.php">Don't have an account? Sign up here.</a>
 <?php
 include 'footer.php';
 ?>
