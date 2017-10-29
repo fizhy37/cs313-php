@@ -22,7 +22,7 @@ if (isset ($_POST['username'])) {
     } else {
         array_push($errors, "Incorrect username or password");
     }
-    */
+    
     if (password_verify($password, $passFromDB)) {
         session_start();
         $_SESSION['username'] = $username;
@@ -30,30 +30,49 @@ if (isset ($_POST['username'])) {
         die();
     } else {
         array_push($errors, "Incorrect username or password");
+    }
+    */
+}
+
+
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (!empty($_POST['username'])) {
+        $username = test_input($_POST['username']);
+    } else {
+        array_push($errors, "You must enter your username");
+    }
+    if (!empty($_POST['password'])) {
+        $password = test_input($_POST['password']);
+    } else {
+        array_push($errors, "You must enter your password");
+    }
+    if (!empty($_POST['username']) && !empty($_POST['username'])) {
+        echo "HERE";
+        $st = $db->prepare("SELECT username FROM week7.user WHERE username = '$username'");
+        $st->execute();
+        $count = (int)$st->rowCount();
+        if ($count == 0) {
+            echo "count is 0";
+            $hashedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
+            $st = $db->prepare("INSERT INTO week7.user (username, password, is_admin) VALUES('$username', '$hashedPassword', false)");
+            $st->execute();
+            $_SESSION['username'] = $username;
+            header("location: week7TeamWelcome.php");
+            die();
+        } else {
+            echo "count is not 0";
+            array_push($errors, "Your username already exists.");
+        }
     }
 }
 
-/*
-if (!empty($_POST['username']) && !empty($_POST['password'])) {
-    $st = $db->prepare("SELECT * FROM user_account WHERE username = '$username'");
-    $st->execute();
-    $row = $st->fetch();
-    $passFromDB = $row['password'];
-    echo $passFromDB;
-    echo "<br/>";
-    echo $row['username'];
-    echo "<br/>";
-    echo $password;
-    if (password_verify($password, $passFromDB)) {
-        session_start();
-        $_SESSION['username'] = $username;
-        header("location: assign06.php");
-        die();
-    } else {
-        array_push($errors, "Incorrect username or password");
-    }
+function test_input($data) {
+    //$data = trim($data);
+    //$data = stripslashes($data);
+    //$data = htmlspecialchars($data);
+    return $data;
 }
-*/
+
 ?>
 <html>
 <head>

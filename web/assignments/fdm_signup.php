@@ -15,14 +15,15 @@
 		if (!empty($_POST['username'])) {
 			$username = test_input($_POST['username']);
 		} else {
-			array_push($errors, "Username is required");
+			array_push($errors, "You must enter your username");
 		}
 		if (!empty($_POST['password'])) {
 			$password = test_input($_POST['password']);
 		} else {
-			array_push($errors, "Password is required");
+			array_push($errors, "You must enter your password");
 		}
 		if (!empty($_POST['username']) && !empty($_POST['password'])) {
+			echo "HERE";
 			$st = $db->prepare("SELECT username FROM user_account WHERE username = '$username'");
 			$st->execute();
 			$count = (int)$st->rowCount();
@@ -31,12 +32,13 @@
 				$hashedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
 				$st = $db->prepare("INSERT INTO user_account (username, password, is_admin) VALUES('$username', '$hashedPassword', false)");
 				$st->execute();
+				session_start();
 				$_SESSION['username'] = $username;
 				header("location: assign06.php");
 				die();
 			} else {
 				echo "count is not 0";
-				array_push($errors, "Your username already exists");
+				array_push($errors, "Your username already exists.");
 			}
 		}
 	}
