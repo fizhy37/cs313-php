@@ -2,6 +2,7 @@
 
 include 'connect_db.php';
 
+$username = "";
 $errors = array();
 
 $stmt = $db->prepare("SELECT * FROM user_account WHERE username = ?");
@@ -10,24 +11,35 @@ if ($stmt->execute(array($_POST['username']))) {
     $firstRow = $data[0];
 }
 
-if (!empty($_POST['username']) && !empty($_POST['password'])) {
-    $st = $db->prepare("SELECT * FROM user_account WHERE username = '$username'");
-    $st->execute();
-    $row = $st->fetch();
-    $passFromDB = $row['password'];
-    echo $passFromDB;
-    echo "<br/>";
-    echo $row['username'];
-    echo "<br/>";
-    echo $password;
-    if (password_verify($password, $passFromDB)) {
-        $_SESSION['username'] = $username;
-        header("location: assign06.php");
-        die();
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (!empty($_POST['username'])) {
+        $username = test_input($_POST['username']);
     } else {
-        array_push($errors, "Incorrect username or password");
+        array_push($errors, "You must enter your username");
     }
-}
+    if (!empty($_POST['password'])) {
+        $password = test_input($_POST['password']);
+    } else {
+        array_push($errors, "You must enter your password");
+    }
+    if (!empty($_POST['username']) && !empty($_POST['password'])) {
+        $st = $db->prepare("SELECT * FROM user_account WHERE username = '$username'");
+        $st->execute();
+        $row = $st->fetch();
+        $passFromDB = $row['password'];
+        echo $passFromDB;
+        echo "<br/>";
+        echo $row['username'];
+        echo "<br/>";
+        echo $password;
+        if (password_verify($password, $passFromDB)) {
+            $_SESSION['username'] = $username;
+            header("location: assign06.php");
+            die();
+        } else {
+            array_push($errors, "Incorrect username or password");
+        }
+    }
 ?>
 <html>
 <head>
