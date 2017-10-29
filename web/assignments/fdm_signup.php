@@ -52,28 +52,33 @@
 ?>
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Sign Up</title>
-		<link rel="stylesheet" href="db.css">
-		<script src="fdm_js.js"></script>
-    </head>
+<head>
+	<title>Sign Up</title>
+	<link rel="stylesheet" href="db.css">
+	<script src="fdm_js.js"></script>
+</head>
 
-    <body>
+<body>
+	<nav>
+        <a class="bar" href="../home.html">Home</a>
+        <a class="bar" href="../assignments.html">Assignments</a>
+        <a class="bar" href="http://fisherdigitalmedia.businesscatalyst.com">FDM Website</a>
+        <a class="bar" href="https://www.youtube.com/sabertoothzebras">YouTube</a>
+    </nav>
+	<div class="topper">
         <h2>Sign up!</h2>
 		<div class="search_settings">
 			<?php
 				if (count($errors) > 0) {
-					echo '<p class="error_message">';
-					foreach ($errors as $error) {
-						echo $error . '<br/>';
-					}
-					echo '</p>';
-				}
+                    foreach ($errors as $error) {
+                        echo '<p class="error_message">' . $error . '</p><br/>';
+                    }
+                }
 			?>
 			<form action="" method="POST">
 				
 				<label for="username">Enter a unique username</label>
-				<input class="searchbar" type="text" name="username" value="<?php echo $username;?> autofocus required">
+				<input class="searchbar" type="text" name="username" value="<?php echo $username;?>" autofocus required>
 
 				<label for="password">Enter a password</label>
 				<input class="searchbar" type="password" name="password">
@@ -82,5 +87,6 @@
 			</form>
 		</div>
         <a href="login.php">Login</a>
-    </body>
+	</div>
+</body>
 </html>

@@ -102,13 +102,18 @@ function test_input($data) {
                 }
             ?>
             <form action="login.php" method="POST">
+
                 <label for="username">Username: </label>
                 <input class="searchbar" type="text" name="username" autofocus><br/>
+            
                 <label for="password">Password: </label>
                 <input class="searchbar" type="password" name="password"><br/>
+        
                 <input class="submission" type="submit" value="login">
+        
             </form>
         </div>
+        <a href="fdm_signup.php">Don't have an account? Sign up here.</a>
     </div>
 <?php
 include 'footer.php';
